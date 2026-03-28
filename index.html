@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -71,78 +72,361 @@
 
     <div class="helper"></div>
 
-    <!--Header-->
+    <nav>
+        <ul>
+            <li class="logo">
+                <a href="https://www.idsnews.com">
+                    <!-- IDS LOGO SVG -->
+                    <svg viewBox="0 0 163.17 68.85">
+                        <path style="fill:white;" d="M0,67.77V1.08H19.89V67.77Z" />
+                        <path style="fill:white;"
+                            d="M32.85,67.77V1.08H58.32c19.44,0,38.34,6.21,38.34,33.3,0,26.64-20.07,33.39-39.6,33.39ZM52.74,50.4h5.85c12.06,0,17.91-4.41,17.91-16s-5.67-15.3-18.81-15.3H52.74Z" />
+                        <path style="fill:white;"
+                            d="M98.82,59l9.54-13.59c6.66,4.59,15.93,7,23.31,7,9.45,0,11.7-2.16,11.7-4.86s-2.7-3.78-12.51-4.59c-14.31-1.17-28.26-4.86-28.26-21.15C102.6,5.67,115.83,0,131,0c15.84,0,24.48,4.05,29.16,7.83l-9.9,14.31c-3.78-2.52-12.33-4.77-19-4.77s-8.73,1.08-8.73,3.69c0,3.24,2.79,4.05,12.69,4.86,14.94,1.26,28,4.14,28,20.7,0,13.5-11.52,22.23-30.87,22.23C114.66,68.85,105.84,64.53,98.82,59Z" />
+                    </svg>
+                </a>
+                <span id="slug"></span> <!-- slug auto pulls from metadata.json -->
+            </li>
+            <li class="toggle">
+                <i class="fas fa-bars fa-lg"></i>
+            </li>
+            <li id="socials" class="item">
+                <!-- links generate automatically from metadata.json -->
+            </li>
+        </ul>
+    </nav>
+
     <header>
 
-        <!-- Transparent navbar -->
-        <nav>
-            <ul>
-                <li class="logo">
-                    <a href="https://www.idsnews.com">
-                        <!-- IDS LOGO SVG -->
-                        <svg viewBox="0 0 163.17 68.85">
-                            <path style="fill:white;" d="M0,67.77V1.08H19.89V67.77Z" />
-                            <path style="fill:white;"
-                                d="M32.85,67.77V1.08H58.32c19.44,0,38.34,6.21,38.34,33.3,0,26.64-20.07,33.39-39.6,33.39ZM52.74,50.4h5.85c12.06,0,17.91-4.41,17.91-16s-5.67-15.3-18.81-15.3H52.74Z" />
-                            <path style="fill:white;"
-                                d="M98.82,59l9.54-13.59c6.66,4.59,15.93,7,23.31,7,9.45,0,11.7-2.16,11.7-4.86s-2.7-3.78-12.51-4.59c-14.31-1.17-28.26-4.86-28.26-21.15C102.6,5.67,115.83,0,131,0c15.84,0,24.48,4.05,29.16,7.83l-9.9,14.31c-3.78-2.52-12.33-4.77-19-4.77s-8.73,1.08-8.73,3.69c0,3.24,2.79,4.05,12.69,4.86,14.94,1.26,28,4.14,28,20.7,0,13.5-11.52,22.23-30.87,22.23C114.66,68.85,105.84,64.53,98.82,59Z" />
-                        </svg>
-                    </a>
-                    <span id="slug"></span> <!-- slug auto pulls from metadata.json -->
-                </li>
-                <li class="toggle">
-                    <i class="fas fa-bars fa-lg"></i>
-                </li>
-                <li id="socials" class="item">
-                    <!-- links generate automatically from metadata.json -->
-                </li>
-            </ul>
-        </nav>
+        <div class="section" id="welcome-graf">
+            <div class="story">
 
-        <!-- Headline, subhed -->
-        <!-- feel free to change this up — you don't need it to have data scroll speed, 
-        doesn't have to be centered, doesn't have to be 2 lines, etc. (see header options in css directions for more inspo) -->
-        <div class="headline-container">
-            <h1 data-scroll-speed="2">‘They don’t want to not work’</h1>
-            <h2 data-scroll-speed="3">IU graduate workers begin picketing for union recognition</h2>
+                <div class="col-2-resp">
+                    <div>
+                        <h1 id="welcome-head">
+                            Your IDS Guide to the 2026 Indiana primaries
+                        </h1>
+
+                        <p>Election season is here. The IDS has localized our coverage of the Indiana primaries so
+                            you're well-informed whenever and however you decide to vote. Below, you'll find
+                            introductions to local and statewide candidates, along with our latest political coverage.
+                        </p>
+
+                        <p>For general information on all local filings,
+                            <a href="http://" target="_blank" rel="noopener noreferrer">click here</a>.
+                            For statewide filings,
+                            <a href="http://" target="_blank" rel="noopener noreferrer">click here</a>.
+                        </p>
+                    </div>
+
+                    <div>
+                        <img src="head_imag.png" alt="Elections 2026 - IDS News">
+                    </div>
+                </div>
+
+
+                <div id="table-of-contents">
+                    <p>Jump ahead to</p>
+                    <div id="contents-links" class="flex">
+                        <div class="pill"><a href="#news">NEWS COVERAGE</a></div>
+                        <div class="pill"><a href="#local-candidates">LOCAL CANDIDATES</a></div>
+                        <div class="pill"><a href="#fed-candidates">STATE &amp; FEDERAL</a></div>
+                        <div class="pill"><a href="#countdown">COUNTDOWN</a></div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-
     </header>
 
     <!-- main article -->
     <main>
-        <p class="caption header-caption">Caption</p>
-        <article>
-            <div class="bylines">
-                <div id="bylines">
-                    <!-- update bylines in metadata.json -->
-                </div>
-                <!-- TO DO update pub_date in metadata.json -->
-                <p id="pubdate"></p>
-            </div>
+
+
+
+
+
+
+        <div class="section" id="news-sec">
+            <div class="section-anchor" id="news"></div>
             <div class="story">
 
-                <!--
-                    TODO: add story content!
+                <div class="section-header">
+                    <h2>News Coverage</h2>
+                    <a href="">MORE STORIES</a>
+                </div>
+                <table id="statistics" class="table table-condensed table-striped"></table>
+                <!-- Big card and cards to right... -->
+                <div id="articles" class="col-2-resp">
+                    <div class="flex-c featured-story">
+                        <img src="Rectangle 2.png" alt="">
+                        <h3>Placeholder Featured Story Headline Goes here</h3>
+                        <p class="credit">By staff reporter</p>
+                    </div>
 
-                    For example code of basic elements, visit our documentation on Notion: https://www.notion.so/Buildout-Documentation-4e36a30949d149e5bb074a753a88a910
-                    You can also check out the kitchen sink article on Github, which contains every existing element in the template: https://github.com/ids-digi/kitchen-sink-article
-                -->
+                    <div class="article-list flex-c">
+                        <div class="article flex-h">
+                            <div>
+                                <p class="place">MONROE COUNTY</p>
+                                <h3>Placeholder: Second Story headline</h3>
+                                <p class="credit">Author</p>
+                            </div>
+                            <img src="Rectangle 2.png" alt="">
+                        </div>
 
-                <!-- small bios -->
-                <div class="author-bios">
-                    <!-- update bios in metadata.json -->
-                    <!-- delete this div if you don't want them to show up -->
+                        <div class="article flex-h">
+                            <div>
+                                <p class="place">MONROE COUNTY</p>
+                                <h3>Placeholder: Second Story headline</h3>
+                                <p class="credit">Author</p>
+                            </div>
+                            <img src="Rectangle 2.png" alt="">
+                        </div>
+
+                        <div class="article flex-h">
+                            <div>
+                                <p class="place">MONROE COUNTY</p>
+                                <h3>Placeholder: Second Story headline</h3>
+                                <p class="credit">Author</p>
+                            </div>
+                            <img src="Rectangle 2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section" id="local-candidates-sec">
+            <div class="section-anchor" id="local-candidates"></div>
+            <div class="story">
+                <div class="section-header">
+                    <h2>Local Candidates</h2>
+                    <a href="">VIEW ALL</a>
                 </div>
 
-                <p class="donate">
-                    <em>Like what you're reading?</em><br>
-                    Support independent, award-winning student journalism.
-                    <a href="https://www.idsnews.com/page/donate" target="_blank">Donate.</a>
-                </p>
-            </div>
-        </article>
+                <!-- Three rows -->
+                <div>
+                    <div class="candidate-row">
+                        <div>
+                            <h3>County Council</h3>
+                            <p>The Monroe County Council is responsible for adopting the county's annual budget and
+                                fixing
+                                tax rates. Multiple at-large seats are up for grabs this cycle.</p>
+                            <a href="">READ MORE</a>
+                        </div>
+                        <div class="headshots">
+                            <div>
+                                <img src="" alt="" class="headshot">
+                                <h4>Candidate</h4>
+                            </div>
+                            <div>
+                                <img src="" alt="" class="headshot">
+                                <h4>Candidate</h4>
+                            </div>
+                            <div>
+                                <img src="" alt="" class="headshot">
+                                <h4>Candidate</h4>
+                            </div>
+                            <div>
+                                <img src="" alt="" class="headshot">
+                                <h4>Candidate</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="candidate-row">
+                        <div>
+                            <h3>County Commissioner</h3>
+                            <p>The Monroe County Board of Commissioners oversees county properties, road and bridge
+                                maintenance, and authorizes claims against the county.</p>
+                            <a href="">Read More</a>
+                        </div>
+                        <div class="headshots">
+                            <div>
+                                <img src="" alt="" class="headshot">
+                                <h4>Candidate</h4>
+                            </div>
+                            <div>
+                                <img src="" alt="" class="headshot">
+                                <h4>Candidate</h4>
+                            </div>
+                            <div>
+                                <img src="" alt="" class="headshot">
+                                <h4>Candidate</h4>
+                            </div>
+                            <div>
+                                <img src="" alt="" class="headshot">
+                                <h4>Candidate</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="candidate-row">
+                        <div>
+                            <h3>Local State House &amp; Senate</h3>
+                            <p>The Monroe County Council is responsible for adopting the county's annual budget and
+                                fixing
+                                tax rates. Multiple at-large seats are up for grabs this cycle.</p>
+                            <a href="">Read More</a>
+                        </div>
+                        <div class="headshots">
+                            <div>
+                                <img src="" alt="" class="headshot">
+                                <h4>Candidate</h4>
+                            </div>
+                            <div>
+                                <img src="" alt="" class="headshot">
+                                <h4>Candidate</h4>
+                            </div>
+                            <div>
+                                <img src="" alt="" class="headshot">
+                                <h4>Candidate</h4>
+                            </div>
+                            <div>
+                                <img src="" alt="" class="headshot">
+                                <h4>Candidate</h4>
+                            </div>
+                        </div>
+                    </div>
 
+                </div>
+            </div>
+        </div>
+        <!-- End Local Candidates -->
+
+        <div class="section" id="fed-candidates-sec">
+            <div class="section-anchor" id="fed-candidates"></div>
+            <div class="story">
+                <div class="section-header">
+                    <h2>State &amp; Federal Candidates</h2>
+                    <a href="">VIEW ALL</a>
+                </div>
+
+                <!-- Three rows -->
+                <div>
+                    <div class="candidate-row">
+                        <div>
+                            <h3>Governor</h3>
+                            <p>Indiana's gubernatorial race features candidates from both major parties vying for the
+                                state's top executive office.</p>
+                            <a href="">READ MORE</a>
+                        </div>
+                        <div class="headshots">
+                            <div>
+                                <img src="" alt="" class="headshot">
+                                <h4>Candidate</h4>
+                            </div>
+                            <div>
+                                <img src="" alt="" class="headshot">
+                                <h4>Candidate</h4>
+                            </div>
+                            <div>
+                                <img src="" alt="" class="headshot">
+                                <h4>Candidate</h4>
+                            </div>
+                            <div>
+                                <img src="" alt="" class="headshot">
+                                <h4>Candidate</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="candidate-row">
+                        <div>
+                            <h3>U.S. House</h3>
+                            <p>Candidates from across the political spectrum are competing to represent Indiana in the
+                                United States House of Representatives.</p>
+                            <a href="">Read More</a>
+                        </div>
+                        <div class="headshots">
+                            <div>
+                                <img src="" alt="" class="headshot">
+                                <h4>Candidate</h4>
+                            </div>
+                            <div>
+                                <img src="" alt="" class="headshot">
+                                <h4>Candidate</h4>
+                            </div>
+                            <div>
+                                <img src="" alt="" class="headshot">
+                                <h4>Candidate</h4>
+                            </div>
+                            <div>
+                                <img src="" alt="" class="headshot">
+                                <h4>Candidate</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="candidate-row">
+                        <div>
+                            <h3>State Attorney General</h3>
+                            <p>Candidates are seeking to serve as Indiana's top legal officer, overseeing the state's
+                                legal
+                                affairs and consumer protection.</p>
+                            <a href="">Read More</a>
+                        </div>
+                        <div class="headshots">
+                            <div>
+                                <img src="" alt="" class="headshot">
+                                <h4>Candidate</h4>
+                            </div>
+                            <div>
+                                <img src="" alt="" class="headshot">
+                                <h4>Candidate</h4>
+                            </div>
+                            <div>
+                                <img src="" alt="" class="headshot">
+                                <h4>Candidate</h4>
+                            </div>
+                            <div>
+                                <img src="" alt="" class="headshot">
+                                <h4>Candidate</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- End State and Fed -->
+
+
+
+        <div class="section" id="countdown-sec">
+            <div class="section-anchor" id="countdown"></div>
+            <div class="story">
+                <div class="flex-c">
+                    <h2>Countdown to the Primaries </h2>
+
+
+                    <div class="flex-h timer-row">
+                        <div class="flex-c countdown-num">
+                            <p class="countdown-text" id="countdown-days">00</p>
+                            <p class="countdown-label">DAYS</p>
+                        </div>
+                        <div class="flex-c countdown-num">
+                            <p class="countdown-text" id="countdown-hrs">00</p>
+                            <p class="countdown-label">HOURS</p>
+                        </div>
+                        <div class="flex-c countdown-num">
+                            <p class="countdown-text" id="countdown-mins">00</p>
+                            <p class="countdown-label">MINUTES</p>
+                        </div>
+                        <div class="flex-c countdown-num">
+                            <p class="countdown-text" id="countdown-secs">00</p>
+                            <p class="countdown-label">SECONDS</p>
+                        </div>
+                    </div>
+
+                    <p class="donate">
+                        <em>Like what you're reading?</em><br>
+                        Support independent, award-winning student journalism.
+                        <a href="https://www.idsnews.com/page/donate" target="_blank">Donate.</a>
+                    </p>
+                </div>
+
+
+            </div>
+            <!-- TODO -->
+            <script src="js/countdown.js"></script>
     </main>
 
     <footer>
@@ -168,8 +452,8 @@
                 <a href="https://www.facebook.com/idsnews" target="_blank"><i class="fab fa-facebook"></i></a>
                 <a href="https://twitter.com/idsnews" target="_blank"><i class="fab fa-twitter"></i></a>
                 <a href="https://www.instagram.com/idsnews/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://open.spotify.com/show/4Dq0KFTxDssQSioraHBW0j"
-                    target="_blank"><i class="fab fa-spotify"></i></a>
+                <a href="https://open.spotify.com/show/4Dq0KFTxDssQSioraHBW0j" target="_blank"><i
+                        class="fab fa-spotify"></i></a>
             </div>
         </div>
         <div class="links">
@@ -189,6 +473,9 @@
     <script src="js/ads.js"></script>
     <script src="js/ids.js"></script>
     <script src="js/metadata.js"></script>
+    <!-- Sheetrock -->
+    <script src="https://unpkg.com/sheetrock@1.2.0/dist/sheetrock.min.js"></script>
+    <script src="js/sheet.js"></script>
 </body>
 
 </html>

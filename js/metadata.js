@@ -1,6 +1,6 @@
 const data = {
     "url": "your-url-here",
-    "slug": "Story slug",
+    "slug": "Elections 2026",
     "headline": "This is the headline",
     "title": "Buildout Template",
     "pub_date": "{insert your date in metadata.json}",
@@ -86,11 +86,11 @@ function setAuthorBio(type, author) {
     }
 }
 
-document.querySelector('#bylines').innerHTML = bylines_html;
-document.querySelector('.author-bios').innerHTML = bios_html;
+// document.querySelector('#bylines').innerHTML = bylines_html;
+// document.querySelector('.author-bios').innerHTML = bios_html;
 
 // pubdate
-document.querySelector('#pubdate').innerHTML = "Published " + data.pub_date;
+// document.querySelector('#pubdate').innerHTML = "Published " + data.pub_date;
 
 // title & slug
 document.querySelector('title').innerHTML = data.title + ' | Indiana Daily Student';

@@ -143,10 +143,7 @@ body {
 
 h1,
 h2 {
-    text-align: center;
-    margin: 0 auto;
-    max-width: 80%;
-    color: white;
+    color: black;
     font-weight: 800;
 }
 
@@ -225,29 +222,11 @@ p.credit {
     text-align: center;
 }
 
-/* 
-    HEADER
-*/
-header {
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-}
-
-.headline-container {
-    top: 45%;
-    position: absolute;
-}
-
-.header-caption {
-    padding-left: var(--sm);
-    padding-right: var(--sm);
-}
 
 
 /* navbar */
 nav {
+    background-color: black;
     color: white;
     position: fixed;
     width: 100%;
@@ -255,6 +234,8 @@ nav {
     -webkit-transition: 1s;
     /* For Safari 3.1 to 6.0 */
     transition: 1s;
+    height: var(--nav-height);
+    top: 0;
 }
 
 nav li {
@@ -293,7 +274,6 @@ li.logo svg {
 }
 
 li.logo span {
-    display: none;
     -webkit-transition: 1s;
     /* For Safari 3.1 to 6.0 */
     transition: 1s;
