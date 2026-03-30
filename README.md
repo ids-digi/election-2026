@@ -11,3 +11,6 @@ This is the template for the IDS buildouts. Please let the digi desk know if you
 <h2>About this project</h2>
 <p>Add any useful info about your code here!</p>
 
+## TODO: 
+[] Improve Navigation
+[] Page-based metadata stuffs (rm script import...)
