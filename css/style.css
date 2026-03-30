@@ -163,6 +163,12 @@ a:visited:not(footer *) {
   content: "  →";
 }
 
+.race-details {
+  .flex-h {
+    flex-wrap: wrap;
+  }
+}
+
 .candidate {
   display: flex;
   flex-direction: column;
@@ -199,6 +205,10 @@ a:visited:not(footer *) {
 
   .party.dem {
     color:#0D1BB3;
+  }
+
+  .party.rep {
+    color:#D81811;
   }
 }
 
@@ -363,6 +373,8 @@ header#local-candidates-sec {
 }
 
 
+
+
 /* 
 media queries helper
 */
@@ -398,6 +410,19 @@ media queries helper
 
   .article {
     justify-content: space-between;
+  }
+
+  .race-details {
+    .flex-h {
+      justify-content: center;
+    }
+  }
+
+  .candidate {
+    img {
+      width: 150px;
+      height: 150px;
+    }
   }
 }
 
