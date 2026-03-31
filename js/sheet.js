@@ -1,15 +1,5 @@
 // filepath: /home/calvin/Documents/ids/election-2026/js/sheet.js
 
-/**
- * Google Sheet Structure Required:
- * Column A: headline (h3 text)
- * Column B: description (p text)
- * Column C: imageUrl (img src)
- * Column D: credit (p.credit text)
- * Column E: isFeatured (true/false - determines .featured-story class)
- * Column F: link (optional - a href for article)
- */
-
 const url = 'https://docs.google.com/spreadsheets/d/1or2mAVHAwpzCLrSwC0xghyx60CBok5qVCkHsfto0quM/edit?gid=0#gid=0';
 
 $(document).ready(function () {
@@ -30,9 +20,11 @@ function populateArticles(error, options, response) {
   }
 
 
-  let rows = response.rows.slice(1,5)
+  let rows = response.rows.slice(1)
 
-  rows.sort((a, b) => new Date(a['cellsArray'][0]) - new Date(b['cellsArray'][0]));
+  rows = rows.sort((a, b) => new Date(b['cellsArray'][0]) - new Date(a['cellsArray'][0]));
+  rows = rows.splice(0, 4)
+
 
   const $articlesDiv = $('#articles');
   const $articleList = $('<div class="article-list flex-c"></div>');
@@ -74,7 +66,7 @@ function populateArticles(error, options, response) {
 
       const $info = $('<div></div>');
 
-      $info.append(`<p class='place'>${description}</p>`);
+      // $info.append(`<p class='place'>${description}</p>`);
       $info.append(`<h3>${headline}</h3>`);
       if (credit) {
         $info.append(`<p class="credit">By ${credit}</p>`);

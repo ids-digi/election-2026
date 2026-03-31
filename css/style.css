@@ -1,20 +1,21 @@
+@charset "UTF-8";
+
 /* 
     SET YOUR STYLES IN THIS FILE
     For help, see the style.css documentation: https://www.notion.so/style-css-cac459cc9c384da08f561394bcee4cbf
 */
-
 * {
   /* border: 2px solid lime; */
+  ;
 }
 
 /* FONTS */
 /* add any @import statements for novelty fonts you want to use here ↓ */
-
 /* COLORS */
 :root {
   /* --mycolor: #your color here; */
   --idsred: #990000;
-  --darkgray: rgb(80, 80, 80);
+  --darkgray: #505050;
   --link-color: #C14764;
   --navy: #282437;
 }
@@ -32,71 +33,59 @@
 a:link.article-link,
 a:visited.article-link {
   text-decoration: none;
-  ;
 }
 
-a:link.article-link:hover,
-a:visited.article-link:hover {
-  h3 {
-    text-decoration: underline;
-  }
+a:link.article-link:hover h3,
+a:visited.article-link:hover h3 {
+  text-decoration: underline;
 }
 
 #articles,
 #articles-extra {
   margin-top: 1em;
-
-  img {
-    border-radius: 12px;
-    object-fit: cover;
-  }
-
-  .featured-story {
-    h3 {
-      font-size: 28px;
-    }
-  }
-
-
-  h3 {
-    margin: 0;
-  }
-
-
-  p.credit {
-    text-align: left;
-    text-transform: none;
-  }
-
 }
 
-
-
-.article-list .article {
-  p {
-    margin: 0;
-  }
-
-  img {
-    max-width: 33%;
-  }
-
-  h3 {
-    line-height: 2;
-  }
+#articles img,
+#articles-extra img {
+  border-radius: 12px;
+  object-fit: cover;
 }
 
+#articles .featured-story h3,
+#articles-extra .featured-story h3 {
+  font-size: 28px;
+}
+
+#articles h3,
+#articles-extra h3 {
+  margin: 0;
+}
+
+#articles p.credit,
+#articles-extra p.credit {
+  text-align: left;
+  text-transform: none;
+}
+
+.article-list .article p {
+  margin: 0;
+}
+
+.article-list .article img {
+  max-width: 33%;
+}
+
+.article-list .article h3 {
+  line-height: 2;
+}
 
 #articles-extra .article {
   justify-content: space-between;
 }
 
-
 header {
   padding-top: calc(var(--nav-height) + 40px);
 }
-
-
 
 /* 
   GENERICS
@@ -129,48 +118,39 @@ header {
   padding: 0 15px;
   display: flex;
   align-items: center;
-
-  a:link,
-  a:visited {
-    text-decoration: none;
-    border: none;
-    font-family: 'Inter', sans-serif;
-    color: black
-  }
 }
 
+.pill a:link,
+.pill a:visited {
+  text-decoration: none;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  color: black;
+}
 
-a:link:not(footer *),
-a:visited:not(footer *) {
+.link {
   color: var(--link-color);
   text-decoration: underline;
   border: none;
 }
 
-
-
-
-
 .section-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   border-bottom: 2px solid black;
+}
 
-  a::after {
-    content: "  →";
-  }
+.section-header a::after {
+  content: "  →";
 }
 
 .arrow-link::after {
   content: "  →";
 }
 
-.race-details {
-  .flex-h {
-    flex-wrap: wrap;
-  }
+.race-details .flex-h {
+  flex-wrap: wrap;
 }
 
 .candidate {
@@ -178,50 +158,48 @@ a:visited:not(footer *) {
   flex-direction: column;
   justify-content: end;
   align-items: center;
+}
 
-  .incumbent {
-    border-color: var(--link-color);
-    background-color: #C1476466;
-    width: fit-content;
-    margin-bottom: 1em;
-    align-self: first baseline;
+.candidate .incumbent {
+  border-color: var(--link-color);
+  background-color: #C1476466;
+  width: fit-content;
+  margin-bottom: 1em;
+  align-self: first baseline;
+}
 
-    p {
-      font-family: 'Inter', sans-serif;
-      color: var(--link-color);
-      margin: 0;
-      font-size: 10px;
-    }
-  }
+.candidate .incumbent p {
+  font-family: 'Inter', sans-serif;
+  color: var(--link-color);
+  margin: 0;
+  font-size: 10px;
+}
 
-  img {
-    width: 200px;
-    height: 200px;
-    border-radius: 150px;
-    object-fit: cover;
-  }
+.candidate img {
+  width: 200px;
+  height: 200px;
+  border-radius: 150px;
+  object-fit: cover;
+}
 
-  .party {
-    text-transform: uppercase;
-    font-family: 'Inter', sans-serif;
-    font-size: 12px;
-  }
+.candidate .party {
+  text-transform: uppercase;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+}
 
-  .party.dem {
-    color: #0D1BB3;
-  }
+.candidate .party.dem {
+  color: #0D1BB3;
+}
 
-  .party.rep {
-    color: #D81811;
-  }
+.candidate .party.rep {
+  color: #D81811;
 }
 
 .next-step {
   border-left: 4px solid var(--link-color);
   padding-left: 0.5em;
 }
-
-
 
 /* JUMPING NONSENSE */
 .section-anchor {
@@ -234,56 +212,53 @@ a:visited:not(footer *) {
   flex-wrap: wrap;
 }
 
-
 #countdown-sec {
   background: linear-gradient(135deg, #C44365, #505697);
+}
 
-  h2,
-  h3,
-  h4,
-  p,
-  a:link,
-  a:visited {
-    color: white;
-  }
+#countdown-sec h2,
+#countdown-sec h3,
+#countdown-sec h4,
+#countdown-sec p,
+#countdown-sec a:link,
+#countdown-sec a:visited {
+  color: white;
+}
 
-  .flex-c {
-    align-items: center;
-  }
+#countdown-sec .flex-c {
+  align-items: center;
+}
 
-  .countdown-num {
-    width: 7em;
-    border: 1px solid white;
-    border-radius: 10px;
-    background-color: #ffffff44;
+#countdown-sec .countdown-num {
+  width: 7em;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: #ffffff44;
+}
 
-    .countdown-text {
-      font-family: 'Playfair Display', 'Times New Roman', serif;
-      font-size: 3em;
-      font-weight: 800;
-      margin: 0;
-    }
+#countdown-sec .countdown-num .countdown-text {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  font-size: 3em;
+  font-weight: 800;
+  margin: 0;
+}
 
-    .countdown-label {
-      margin-top: 0;
-      font-family: 'Inter', sans-serif;
-    }
-  }
+#countdown-sec .countdown-num .countdown-label {
+  margin-top: 0;
+  font-family: 'Inter', sans-serif;
+}
 
-  .donate {
-    text-align: center;
-  }
+#countdown-sec .donate {
+  text-align: center;
 }
 
 /* 
   SET ANY MORE STYLES YOU WANT BELOW
   Be sure to delete empty declarations
 */
-
 /* 
 TYPOGRAPHY
 */
-
 h1 {
   color: black;
   font-size: 28px;
@@ -308,11 +283,9 @@ h4 {
   font-weight: 400;
 }
 
-
 p {
   font-size: 14px;
 }
-
 
 .headshot {
   width: 100px;
@@ -321,63 +294,60 @@ p {
   background-color: #D9D9D9;
 }
 
-
 /* Specific Stuff */
-#table-of-contents {
-  .pill {
-    font-size: 10px;
-    ;
-  }
+#table-of-contents .pill {
+  font-size: 10px;
 }
 
 header#local-candidates-sec {
   padding-bottom: 40px;
 }
 
-
 #local-candidates-sec {
   background-color: #282437;
+}
 
-  .section-header {
-    border-color: white;
-  }
+#local-candidates-sec .section-header {
+  border-color: white;
+}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  p,
-  a:link,
-  a:visited {
-    color: white;
-  }
+#local-candidates-sec h1,
+#local-candidates-sec h2,
+#local-candidates-sec h3,
+#local-candidates-sec h4,
+#local-candidates-sec p,
+#local-candidates-sec a:link,
+#local-candidates-sec a:visited {
+  color: white;
 }
 
 .section {
   padding: 1.5em 0;
 }
 
-
 .candidate-row {
   display: flex;
   gap: 1em;
-
-  .headshots {
-    display: flex;
-    justify-content: center;
-    gap: .5em;
-    margin-top: 1.3em;
-  }
-
-
-  h4 {
-    font-weight: 400;
-    text-align: center;
-  }
+  justify-content: space-between;
 }
 
+.candidate-row .headshots {
+  display: flex;
+  justify-content: center;
+  gap: .5em;
+  margin-top: 1.3em;
+}
 
+.candidate-row .headshots div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.candidate-row h4 {
+  font-weight: 400;
+  text-align: center;
+}
 
 /* 
 media queries helper
@@ -385,7 +355,6 @@ media queries helper
 .helper {
   /* comment out next line to get visual help with media queries while you code */
   display: none !important;
-
   width: 60px;
   height: 60px;
   background-color: red;
@@ -405,7 +374,10 @@ media queries helper
   font-size: 25px;
 }
 
-
+/* MEDIA QUERIES FROM SMALLEST TO LARGEST = MOBILE FIRST */
+/* use these for responsive design — you can set different styles based on how wide the screen is */
+/* Extra small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default */
 @media (max-width: 576px) {
   .col-2-resp {
     display: flex;
@@ -416,118 +388,54 @@ media queries helper
     justify-content: space-between;
   }
 
-  .race-details {
-    .flex-h {
-      justify-content: center;
-    }
+  .race-details .flex-h {
+    justify-content: center;
   }
-
 
   .candidate-row {
     flex-direction: column;
-
-    .headshots {
-      flex-wrap: wrap;
-      justify-content: left;
-    }
   }
 
-  .candidate {
-    img {
-      width: 150px;
-      height: 150px;
-    }
+  .candidate-row .headshots {
+    flex-wrap: wrap;
+    justify-content: left;
   }
 
+  .candidate img {
+    width: 150px;
+    height: 150px;
+  }
 
-  #countdown-sec {
-    .timer-row {
-      width: 100%;
-      justify-content: center;
-    }
+  #countdown-sec .timer-row {
+    width: 100%;
+    justify-content: center;
+  }
 
-    .countdown-num {
-      /* width: em; */
-      width: 20%;;
-      border: 1px solid white;
-      border-radius: 10px;
-      background-color: #ffffff44;
+  #countdown-sec .countdown-num {
+    /* width: em; */
+    width: 20%;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: #ffffff44;
+  }
 
+  #countdown-sec .countdown-num .countdown-text {
+    font-family: 'Playfair Display', 'Times New Roman', serif;
+    font-size: 2em;
+    font-weight: 800;
+    margin: 0;
+  }
 
-      .countdown-text {
-        font-family: 'Playfair Display', 'Times New Roman', serif;
-        font-size: 2em;
-        font-weight: 800;
-        margin: 0;
-      }
+  #countdown-sec .countdown-num .countdown-label {
+    margin-top: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.5em;
+    margin-bottom: 0.5em;
+  }
 
-      .countdown-label {
-        margin-top: 0;
-        font-family: 'Inter', sans-serif;
-        font-size: 0.5em;
-        margin-bottom: 0.5em;
-      }
-    }
-
-    .donate {
-      text-align: center;
-    }
+  #countdown-sec .donate {
+    text-align: center;
   }
 }
 
-/* MEDIA QUERIES FROM SMALLEST TO LARGEST = MOBILE FIRST */
-/* use these for responsive design — you can set different styles based on how wide the screen is */
-/* Extra small devices (portrait phones, less than 576px)
-No media query for `xs` since this is the default */
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-  .helper {
-    background-color: orange;
-  }
-
-  .helper::after {
-    content: 'S';
-  }
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-  header {
-    /* adjust header image positioning for larger devices if needed */
-    /* you can also change the header image for mobile here */
-    /* background-position: 50% 50%; */
-  }
-
-  .helper {
-    background-color: yellow;
-  }
-
-  .helper::after {
-    content: 'M';
-    color: black;
-  }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-  .helper {
-    background-color: green;
-  }
-
-  .helper::after {
-    content: 'L';
-    color: white;
-  }
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-  .helper {
-    background-color: blue;
-  }
-
-  .helper::after {
-    content: 'XL';
-  }
-}
+/* 768, 992, 1200 */

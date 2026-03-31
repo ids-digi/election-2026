@@ -32,7 +32,7 @@ function populateArticles(error, options, response) {
 
   let rows = response.rows.slice(1)
 
-  rows.sort((a, b) => new Date(a['cellsArray'][0]) - new Date(b['cellsArray'][0]));
+  rows.sort((a, b) => new Date(b['cellsArray'][0]) - new Date(a['cellsArray'][0]));
 
 
 
@@ -112,7 +112,7 @@ function populateArticles(error, options, response) {
 
       const $info = $('<div></div>');
 
-      $info.append(`<p class='place'>${description}</p>`);
+      // $info.append(`<p class='place'>${description}</p>`);
       $info.append(`<h3>${headline}</h3>`);
       if (credit) {
         $info.append(`<p class="credit">By ${credit}</p>`);
