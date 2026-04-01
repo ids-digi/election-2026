@@ -214,8 +214,8 @@ header {
 #countdown-sec h3,
 #countdown-sec h4,
 #countdown-sec p,
-#countdown-sec a:link,
-#countdown-sec a:visited {
+#countdown-sec a:link.link,
+#countdown-sec a:visited.link {
   color: white;
 }
 
@@ -311,8 +311,8 @@ header#local-candidates-sec {
 #local-candidates-sec h3,
 #local-candidates-sec h4,
 #local-candidates-sec p,
-#local-candidates-sec a:link,
-#local-candidates-sec a:visited {
+#local-candidates-sec a:link.link,
+#local-candidates-sec a:visited.link {
   color: white;
 }
 
