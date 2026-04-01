@@ -30,13 +30,13 @@
   text-transform: uppercase;
 }
 
-a:link.article-link,
-a:visited.article-link {
+a:link.article-link.link,
+a:visited.article-link.link {
   text-decoration: none;
 }
 
-a:link.article-link:hover h3,
-a:visited.article-link:hover h3 {
+a:link.article-link.link:hover h3,
+a:visited.article-link.link:hover h3 {
   text-decoration: underline;
 }
 
@@ -120,18 +120,12 @@ header {
   align-items: center;
 }
 
-.pill a:link,
-.pill a:visited {
+.pill a:link.link,
+.pill a:visited.link {
   text-decoration: none;
   border: none;
   font-family: 'Inter', sans-serif;
   color: black;
-}
-
-.link {
-  color: var(--link-color);
-  text-decoration: underline;
-  border: none;
 }
 
 .section-header {
@@ -440,3 +434,10 @@ No media query for `xs` since this is the default */
 }
 
 /* 768, 992, 1200 */
+
+a:link.link,
+a:visited.link {
+  color: var(--link-color);
+  text-decoration: underline;
+  border: none;
+}

@@ -46,7 +46,7 @@ function populateArticles(error, options, response) {
 
 
     if (featured) {
-      const $article_outer = $(`<a class="article-link" href="${link}" target="_blank"></a>`);
+      const $article_outer = $(`<a class="article-link link" href="${link}" target="_blank"></a>`);
       const $article = $(`<div class="flex-c featured-story"></div>`);
       if (imageUrl) {
         $article.append(`<img src="${imageUrl}" alt="${altText}">`);
@@ -61,7 +61,7 @@ function populateArticles(error, options, response) {
       featured = false;
     } else {
 
-      const $article_outer = $(`<a class="article-link" href="${link}" target="_blank"></a>`);
+      const $article_outer = $(`<a class="article-link link" href="${link}" target="_blank"></a>`);
       const $article = $(`<div class="article flex-h"></div>`);
 
       const $info = $('<div></div>');
