@@ -110,7 +110,7 @@ function populateArticles(error, options, response) {
       const $article_outer = $(`<a class="article-link link" href="${link}" target="_blank"></a>`);
       const $article = $(`<div class="article flex-h"></div>`);
 
-      const $info = $('<div></div>');
+      const $info = $('<div class="info"></div>');
 
       // $info.append(`<p class='place'>${description}</p>`);
       $info.append(`<h3>${headline}</h3>`);
@@ -118,12 +118,12 @@ function populateArticles(error, options, response) {
         $info.append(`<p class="credit">By ${credit}</p>`);
       }
 
-      $article.append($info)
-
-      if (imageUrl) {
+	  if (imageUrl) {
         $article.append(`<img src="${imageUrl}" alt="${altText}">`);
       }
 
+
+      $article.append($info)
 
       $article_outer.append($article);
       $extraArticles.append($article_outer);

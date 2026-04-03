@@ -5,8 +5,7 @@
     For help, see the style.css documentation: https://www.notion.so/style-css-cac459cc9c384da08f561394bcee4cbf
 */
 * {
-  /* border: 2px solid lime; */
-  ;
+	scroll-behavior: smooth;
 }
 
 /* FONTS */
@@ -42,7 +41,7 @@ a:visited.article-link.link:hover h3 {
 
 #articles,
 #articles-extra {
-  margin-top: 1em;
+  margin: 1em 0 4em;
 }
 
 #articles img,
@@ -76,7 +75,7 @@ a:visited.article-link.link:hover h3 {
 }
 
 .article-list .article h3 {
-  line-height: 2;
+  line-height: 1.5;
 }
 
 #articles-extra .article {
@@ -93,7 +92,7 @@ header {
 .col-2-resp {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1em;
+  gap: 3em;
 }
 
 .flex {
@@ -107,26 +106,34 @@ header {
 
 .flex-c {
   display: flex;
-  gap: 1em;
+  gap: 2em;
   flex-direction: column;
 }
 
 .pill {
   height: 30px;
-  border: 2px solid #CFCFCF;
+  border: 2px solid #CFCFCF !important;
   border-radius: 15px;
   padding: 0 15px;
   display: flex;
   align-items: center;
+
+  transition: border-color 0.2s, background-color 0.2s;
 }
 
-.pill a:link.link,
-.pill a:visited.link {
+.pill:hover {
+	background-color: #DFDFDF;
+	border: 2px solid #ABABAB !important;
+}
+
+a:link.link.pill,
+a:visited.link.pill  {
   text-decoration: none;
-  border: none;
   font-family: 'Inter', sans-serif;
   color: black;
 }
+
+
 
 .section-header {
   display: flex;
@@ -287,6 +294,7 @@ p {
   border-radius: 100px;
   background-color: #D9D9D9;
   object-fit: cover;
+  border-color: red;
 }
 
 /* Specific Stuff */
@@ -317,7 +325,8 @@ header#local-candidates-sec {
 }
 
 .section {
-  padding: 1.5em 0;
+	margin: 30px 0;
+	padding: 1.5em 0;
 }
 
 .candidate-row {

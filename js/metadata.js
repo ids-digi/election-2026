@@ -3,7 +3,7 @@ const data = {
     "slug": "Elections 2026",
     "headline": "2026 Elections Guide",
     "title": "2026 Elections Guide",
-    "pub_date": "{insert your date in metadata.json}",
+    "pub_date": "Blah!",
 }
 
 // pubdate
